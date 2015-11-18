@@ -1,0 +1,22 @@
+{
+  "name": "falcor-tutorial",
+  "version": "0.0.1",
+  "description": "Falcor introduction",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "David Cahill",
+  "license": "MIT",
+  "dependencies": {
+    "falcor": "0.1.14",
+    "falcor-express": "0.1.2",
+    "falcor-hapi": "0.0.2",
+    "falcor-http-datasource": "0.1.2",
+    "falcor-router": "0.2.11",
+    "hapi": "11.1.1",
+    "inert": "3.2.0",
+    "lodash": "3.10.1"
+  }
+}
