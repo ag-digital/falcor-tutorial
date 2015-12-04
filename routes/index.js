@@ -3,9 +3,7 @@ import R from 'ramda'
 
 export default [
     {
-      // match a request for the key "greeting"
       route: "greeting",
-      // respond with a PathValue with the value of "Hello World."
       get: () => {
         return {path:["greeting"], value: "Hello World"}
       }
@@ -13,7 +11,7 @@ export default [
     {
       route: "items[{integers:itemIds}].name",
       get: (pathSet) => {
-        return getItems().then(data => {
+        return getData('items.json').then(data => {
           const jsonData = JSON.parse(data.toString())
           let results = []
           const pushResults = itemId => {
@@ -32,9 +30,9 @@ export default [
     }
   ]
 
-const getItems = () => {
+const getData = (fileName) => {
   return new Promise((resolve, reject) => {
-    return fs.readFile(__dirname + '/../data/items.json', (err, data) => {
+    return fs.readFile(__dirname + '/../data/' + fileName, (err, data) => {
       if (err) { return reject(err) }
       return resolve(data)
     });
