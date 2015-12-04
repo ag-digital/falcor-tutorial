@@ -1,14 +1,8 @@
-var Router = require('falcor-router');
+import Router from 'falcor-router'
+import routes from  './routes/index.js'
 
-module.exports = function () {
-  return new Router([
-    {
-      // match a request for the key "greeting"
-      route: "greeting",
-      // respond with a PathValue with the value of "Hello World."
-      get: function() {
-        return {path:["greeting"], value: "Hello World"};
-      }
-    }
-  ]);
+export default class FalcorRouter extends Router.createClass(routes) {
+  constructor() {
+    super()
+  }
 }
