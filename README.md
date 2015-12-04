@@ -33,6 +33,9 @@ The falcor router is defined in `AppFalcorRouter.js`.
 
 ## Tasks
 
-//TODO
+* A test that retrieves data from the `data/cities.json` file is currently failing. Your task is to implement the correct route in the `routes/index.js` file to make this test pass. 
+* Add a new route to the `routes/index.js` file that allows the app to retrieve data from the `data/cities.json` file. The examples in `routes/index.js` should give you an idea of how to go about this.
+* To test the new route run `npm test`.
+* If all tests are passing, you have completed this tutorial =)
 
 For more information on Falcor please see http://netflix.github.io/falcor/starter/what-is-falcor.html
