@@ -24,6 +24,7 @@ For example the following route will return this JSON resource: ``` {"json":{"gr
 * git clone the project
 * run `npm install`
 * run `npm start`
+* Tests can be run using `npm test`
 
 You can then browse to the site by going to `http://localhost:3000`
 
