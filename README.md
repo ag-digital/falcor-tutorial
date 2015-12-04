@@ -38,4 +38,5 @@ The falcor router is defined in `AppFalcorRouter.js`.
 * To test the new route run `npm test`.
 * If all tests are passing, you have completed this tutorial =)
 
+Tested on Node V4.2.1
 For more information on Falcor please see http://netflix.github.io/falcor/starter/what-is-falcor.html
