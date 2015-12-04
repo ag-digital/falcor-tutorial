@@ -52,5 +52,24 @@ test('falcor server returns items array', t => {
   })
 })
 
+test('falcor server returns cities array', t => {
+  const query = ["cities", {from: 0, to: 2}, "name"]
+  falcorModel.get(query).then(response => {
+    const cities = response.json.cities
+    t.same(R.keys(cities).length, 3)
+    R.forEach(city => {
+      city = cities[city]
+      t.same(city.hasOwnProperty('name'), true)
+    })
+    t.same(cities['0'].name, 'London')
+    t.same(cities['1'].name, 'Paris')
+    t.same(cities['2'].name, 'New York')
+    t.end();
+  }).catch(err => {
+    t.fail(err.message)
+    t.end()
+  })
+})
+
 
 
