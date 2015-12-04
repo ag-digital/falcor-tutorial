@@ -21,7 +21,7 @@ test.after(t => {
   })
 })
 
-test('falcor server server returns greeting', t => {
+test('falcor server returns greeting', t => {
   const query = ['greeting']
   falcorModel.get(query).then(response => {
     const json = response.json
